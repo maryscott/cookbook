@@ -13,3 +13,5 @@ echo '<h1>Spindles Cookbook</h1>
 		<li>suggestions</li>
 	</ul>
 </div>'
+
+?>
