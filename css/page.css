@@ -10,7 +10,7 @@ h1 {
 ul {
 	list-style-type: none;
 	margin: 0;
-	padding: 0;
+	padding: 10px;
 	overflow: hidden;
 	background-color: #182157;
 }
@@ -30,6 +30,7 @@ li a:hover {
 }
 
 button {
+	float: right;
 	background-color: #7E9A34;
-	text-color: #7D2A62;
+	text: #7D2A62;
 }
