@@ -26,5 +26,10 @@ li a {
 }
 
 li a:hover {
-	backgroung-color: #111;
+	background-color: #111;
+}
+
+button {
+	background-color: red;
+	text-color: white;
 }

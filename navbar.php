@@ -1,10 +1,10 @@
 <?php
-echo '<h1>Spindles Cookbook</h1>
+echo "<h1>Spindles Cookbook</h1>";
 
-<button>LOG IN</button>
+echo "<button>LOG IN</button>";
 
 
-	<ul>
+echo '<ul>
 		<li><a href="dashbord.php">dashboard</a></li>
 		<li><a href="search.php">search</a></li>
 		<li><a href="browse.php">browse</a></li>
