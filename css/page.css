@@ -1,10 +1,10 @@
 html {
-	background-color: lightblue;
+	background-color: #F8DFA1; 
 }
 
 h1 {
 	text-align: center;
-	color: pink;
+	color: #7E9A34;
 }
 
 ul {
@@ -12,7 +12,7 @@ ul {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	background-color: blue;
+	background-color: #182157;
 }
 
 li {
@@ -20,16 +20,16 @@ li {
 }
 
 li a {
-	color: white;
+	color: #7E6116;
 	padding: 14px 16px;
 	text-decoration: none;
 }
 
 li a:hover {
-	background-color: #111;
+	background-color: #7D2A62;
 }
 
 button {
-	background-color: red;
-	text-color: white;
+	background-color: #7E9A34;
+	text-color: #7D2A62;
 }
