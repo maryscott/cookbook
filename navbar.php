@@ -3,7 +3,7 @@ echo '<h1>Spindles Cookbook</h1>
 
 <button>LOG IN</button>
 
-<div>
+
 	<ul>
 		<li><a href="dashbord.php">dashboard</a></li>
 		<li><a href="search.php">search</a></li>
@@ -12,6 +12,6 @@ echo '<h1>Spindles Cookbook</h1>
 		<li><a href="account.php">account</a></li>
 		<li><a href="suggestions.php">suggestions</a></li>
 	</ul>
-</div>'
+'
 
 ?>
