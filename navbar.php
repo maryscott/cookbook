@@ -7,7 +7,6 @@ echo '<div>
 
 echo '
 	<div>
-	<img src="favicon.png" alt="book with S" style="width:30px">
 	<ul>
 		<li><a href="dashboard.php">dashboard</a></li>
 		<li><a href="search.php">search</a></li>
