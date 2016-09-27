@@ -5,7 +5,10 @@ echo '<div>
 	</div>'
 
 
-echo '<ul>
+echo '
+	<div>
+	<img src="favicon.png" alt="book with S" style="width:30px">
+	<ul>
 		<li><a href="dashboard.php">dashboard</a></li>
 		<li><a href="search.php">search</a></li>
 		<li><a href="browse.php">browse</a></li>
@@ -13,6 +16,7 @@ echo '<ul>
 		<li><a href="account.php">account</a></li>
 		<li><a href="suggestions.php">suggestions</a></li>
 	</ul>
+	</div>
 '
 
 ?>
