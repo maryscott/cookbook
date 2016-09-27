@@ -6,7 +6,6 @@ echo '<div>
 
 
 echo '
-	<div>
 	<ul>
 		<li><a href="dashboard.php">dashboard</a></li>
 		<li><a href="search.php">search</a></li>
@@ -15,7 +14,6 @@ echo '
 		<li><a href="account.php">account</a></li>
 		<li><a href="suggestions.php">suggestions</a></li>
 	</ul>
-	</div>
 '
 
 ?>
