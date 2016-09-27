@@ -13,6 +13,7 @@ ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 10px;
+	padding-left: 20px;
 	overflow: hidden;
 	background-color: #4B5489;
 }
@@ -32,7 +33,7 @@ li a:hover {
 }
 
 button {
-	display: inline-block;
+	float: right;
 	background-color: #7E9A34;
 	text: #7D2A62;
 }
@@ -43,5 +44,21 @@ button {
 	padding-bottom: 20 px;
 	border-top: 10px #182157;
 	width: 100%;
+}
+
+#footerList {
+	background-color: #4B5489;
+	margin: 0;
+	overflow: hidden;
+}
+
+#footerList li{
+	display: inline;
+}
+
+#footerlist li a {
+	color: #7E6116;
+	padding: 14px 16px;
+	text-decoration: none;
 }
 
