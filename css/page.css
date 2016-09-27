@@ -2,7 +2,7 @@ html {
 	background-color: #F8DFA1; 
 }
 
-#title {
+h1 {
 	text-align: center;
 	color: #7E9A34;
 	text-size: 50px;
@@ -37,7 +37,7 @@ button {
 	text: #7D2A62;
 }
 
-#footer1 {
+footer1 {
 	background-color: #4B5489;
 	padding-top: 5px;
 	padding-bottom: 20 px;

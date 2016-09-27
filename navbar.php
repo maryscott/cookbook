@@ -1,5 +1,5 @@
 <?php
-echo "<h1 id="title">Spindles Cookbook</h1>";
+echo "<h1 >Spindles Cookbook</h1>";
 
 echo "<button>LOG IN</button>";
 
