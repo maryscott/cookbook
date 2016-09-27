@@ -1,10 +1,11 @@
 html {
-	background-color: #F8DFA1; 
+	background-color: white; 
 }
 
 h1 {
 	text-align: center;
 	color: #7E9A34;
+	text-size: 30px;
 }
 
 ul {
@@ -12,7 +13,7 @@ ul {
 	margin: 0;
 	padding: 10px;
 	overflow: hidden;
-	background-color: #182157;
+	background-color: #4B5489;
 }
 
 li {
@@ -26,11 +27,11 @@ li a {
 }
 
 li a:hover {
-	background-color: #7D2A62;
+	background-color: #182157;
 }
 
 button {
-	float: right;
+	display: inline-block;
 	background-color: #7E9A34;
 	text: #7D2A62;
 }
