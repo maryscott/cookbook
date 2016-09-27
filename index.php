@@ -12,8 +12,10 @@
 
 Hello World! This is a test to see if the auto awesomeness is working or not.
 
+<div id="footer">
 	<?php
 		include 'footer.php';
 	?>
+</div>
 </body>
 </html>
