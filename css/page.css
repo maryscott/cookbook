@@ -62,3 +62,10 @@ button {
 	text-decoration: none;
 }
 
+#content {
+	padding: 15px 20px;
+	border: solid 1px black;
+	background-color: white;
+	margin: 0px 40px;
+}
+
