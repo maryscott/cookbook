@@ -1,11 +1,12 @@
-html {
-	background-color: white; 
+body {
+	background-color: #F8DFA1; 
 }
 
-h1 {
+#title {
 	text-align: center;
 	color: #7E9A34;
-	text-size: 30px;
+	text-size: 50px;
+	background-color: #F8DFA1;
 }
 
 ul {
@@ -42,4 +43,11 @@ button {
 	padding-bottom: 20 px;
 	border-top: 10px #182157;
 	width: 100%;
+}
+
+.content{
+	padding: 15px 20px;
+	border:solid 1px #553E04;
+	background-color: white;
+	margin: 0px 40px;
 }
