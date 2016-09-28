@@ -3,15 +3,21 @@
 	<link rel="stylesheet" type="text/css" href="css/page.css">
 </head>
 <body>
-<div>
-	<?php
-		include "navbar.php";
-	?>
+	<div id="navbar" class="clearfix">
+		<?php
+			include "navbar.php";
+		?>
+	</div>
 
+	<div id="content" class="clearfix">
 
-</div>
+	</div>
+
+	<div id="footer">
+		<?php
+			include 'footer.php';
+		?>
+	</div>
+
 </body>
-
-
-
 </html>

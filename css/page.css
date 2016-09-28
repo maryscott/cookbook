@@ -57,10 +57,10 @@ button {
 }
 
 #content {
-	padding: 15px 20px;
+	padding: 20x 20px;
 	border: solid 1px black;
 	background-color: white;
-	margin: 0px 40px;
+	margin: 0px 60px;
 }
 
 p{
@@ -69,4 +69,10 @@ p{
 
 #logo {
 	padding-top: 20px;
+}
+
+#search {
+	margin: auto;
+	width: 20%;
+	border: solid 1px green;
 }
