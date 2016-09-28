@@ -2,16 +2,16 @@ html {
 	background-color: #F8DFA1; 
 }
 
-h1 {
+#title {
 	text-align: center;
 	color: #7E9A34;
-	text-size: 70px;
 	background-color: #F8DFA1;
+	font-size: 40px;
 }
 
 ul {
 	list-style-type: none;
-	margin: 0;
+	margin: 10px 0px;
 	padding: 10px;
 	padding-left: 20px;
 	overflow: hidden;
@@ -38,28 +38,22 @@ button {
 	text: #7D2A62;
 }
 
-#footer1 {
+#footer {
 	background-color: #4B5489;
 	padding-top: 5px;
 	padding-bottom: 20 px;
 	border-top: 10px #182157;
 	width: 100%;
+	text-align: center;
+	margin: 10px 0px;
 }
 
-#footerList {
-	background-color: #4B5489;
-	margin: 0;
-	overflow: hidden;
+#footer a {
+	padding: 7px;
 }
 
-#footerList li{
-	display: inline;
-}
-
-#footerlist li a {
-	color: #7E6116;
-	padding: 14px 16px;
-	text-decoration: none;
+.clearfix {
+	overflow: auto;
 }
 
 #content {
@@ -71,4 +65,8 @@ button {
 
 p{
 	padding-left: 10px;
+}
+
+#logo {
+	padding-top: 20px;
 }
