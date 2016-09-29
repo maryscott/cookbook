@@ -64,7 +64,8 @@ button {
 }
 
 p{
-	padding-left: 10px;
+	padding: 10px;
+	margin-right: 20px;
 }
 
 #logo {
@@ -74,5 +75,19 @@ p{
 #search {
 	margin: auto;
 	width: 20%;
-	border: solid 1px green;
+}
+
+#searchbutton {
+	margin: auto;
+	width: 20%;
+}
+
+#frontPageImg{
+	float: left;
+	margin: 20px;
+	padding-right: 10px;
+}
+
+#frontPageImg img {
+	width: 300px;
 }

@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="css/page.css">
+		<link rel="favicon" type="favicon" href="favicon.ico">
 	</head>
 
 	<body>
@@ -11,8 +12,9 @@
 		</div>
 
 	<div id="content" class="clearfix">
-		<img src="FrozenCupcake1.jpg" alt="cupcake" style="float:left;width:300px">
-
+		<div id="frontPageImg">
+		<img src="FrozenCupcake1.jpg" alt="cupcake">
+		</div>
 		<p>
 			When I am doing a bit more than static and finishing this website this portion will talk about the capabilities of the website so that anyone who is just coming accross this site will know what it is for and what it can do.
 		</p>

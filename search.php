@@ -10,8 +10,8 @@
 	</div>
 
 	<div id="content">
-		<div id="search" class="clearfix">
-			<form action="demo_form.asp">
+		<div class="clearfix">
+			<form action="demo_form.asp" id="search">
 				<input type="text" name="fname"><br>
 				<input type="submit" value="Search">
 			</form>
