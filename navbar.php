@@ -1,7 +1,7 @@
 <?php
 echo '<div id="title" class="clearfix">
 		<button>LOG IN</button>
-		<img src="Favicon.png" alt="book" style="float:left;width:60px" id="logo">
+		<img src="favicon.png" alt="book" style="float:left;width:60px" id="logo">
 		<h1>Spindles Cookbook</h1>
 	</div>
 
