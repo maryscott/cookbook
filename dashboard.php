@@ -10,7 +10,11 @@
 	</div>
 
 	<div id="content" class="clearfix">
-
+		<h4 id="dashleft">Frequently View Recipes</h4>
+		<h4 id="dashright">Recipes you have not viewed in a while</h4>
+		<div>
+			
+		</div>
 	</div>
 
 	<div id="footer">

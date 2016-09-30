@@ -22,14 +22,12 @@
 		<div class="inputForms" id="add_a_website">
 			<form>
 				<input type="url" name="homepage">
-				<input type="submit" name="submit">
 			</form>
 		</div>
 		
 		<div class="inputForms" id="add_an_image">
 			<form>
 				Select a file: <input type="file" name="img">
-				<input type="submit">
 			</form>
 		</div>
 		
@@ -37,6 +35,14 @@
 			<form>
 				<textarea rows="10" cols="100">
 Type in your recipe here.
+				</textarea><br>
+			</form>
+		</div>
+		
+		<div class="inputForms">
+			<form>
+				<textarea rows="10" cols="100">
+Brief Description of your recipe.
 				</textarea><br>
 				<input type="submit" name="submit">
 			</form>

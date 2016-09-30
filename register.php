@@ -12,9 +12,12 @@
 	<div id="content" class="clearfix">
 		<div class="inputForms">
 			<form>
+				First Name: <input type="text" name="fname"><br>
+				Last Name: <input type="text" name="lname"><br>
+				E-mail: <input type="text" name="email"><br>
 				Username: <input type="text" name="username"><br>
 				Password: <input type="Password" name="fname"><br>
-				<input type="button" value="login">
+				Confirm Password: <input type="Password" name="fname"><br>
 				<input type="button" value="Register">
 			</form>
 		</div>
