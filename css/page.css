@@ -46,6 +46,7 @@ button {
 	width: 100%;
 	text-align: center;
 	margin: 10px 0px;
+	height: 40px;
 }
 
 #footer a {
@@ -61,6 +62,7 @@ button {
 	border: solid 1px black;
 	background-color: white;
 	margin: 0px 60px;
+	min-height: 50%;
 }
 
 p{
@@ -73,13 +75,7 @@ p{
 }
 
 #search {
-	margin: auto;
-	width: 20%;
-}
-
-#searchbutton {
-	margin: auto;
-	width: 20%;
+	margin: 100px;
 }
 
 #frontPageImg{
@@ -90,4 +86,20 @@ p{
 
 #frontPageImg img {
 	width: 300px;
+}
+
+input {
+	display: inline;
+}
+
+.inputForms {
+	padding: 10px 0px;
+	text-align: center;
+}
+
+h3 {
+	color: pink;
+	text-align: center;
+	font-size: 35px;
+	padding: 10px;
 }
