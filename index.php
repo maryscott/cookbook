@@ -1,7 +1,8 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="css/page.css">
-		<link rel="icon" type="image/ico" href="favicon.ico">
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 	</head>
 
 	<body>
