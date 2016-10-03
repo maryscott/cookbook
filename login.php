@@ -15,8 +15,11 @@
 				Username: <input type="text" name="username"><br>
 				Password: <input type="Password" name="fname"><br>
 				<input type="button" value="login">
-				<input type="button" value="Register">
 			</form>
+			<form action="register.php" id="register">
+				<input type="submit" value="Register" />
+			</form>
+			<a href="register.php">Forgot Password?</a>
 		</div>
 	
 	</div>

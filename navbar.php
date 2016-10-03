@@ -1,6 +1,8 @@
 <?php
 echo '<div id="title" class="clearfix">
-		<button>LOG IN</button>
+		<form action="login.php" id="login">
+			<input type="submit" value="Log In" />
+		</form>
 		<img src="favicon.png" alt="book" style="float:left;width:60px" id="logo">
 		<h1>Spindles Cookbook</h1>
 	</div>

@@ -33,8 +33,12 @@ li a:hover {
 	background-color: #182157;
 }
 
-button {
+#login {
+	display:inline;
 	float: right;
+}
+
+#login > input {
 	background-color: #7E9A34;
 	color: white;
 	font-size: 20px;
