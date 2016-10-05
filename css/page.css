@@ -1,12 +1,13 @@
 html {
-	background-color: #F8DFA1; 
+	background-color: #FFFDD0; 
 }
 
 #title {
 	text-align: center;
-	color: #7E9A34;
-	background-color: #F8DFA1;
+	color: #E75480;
+	background-color: #FFFDD0;
 	font-size: 40px;
+	font-family: Papyrus;
 }
 
 ul {
@@ -27,6 +28,7 @@ li a {
 	padding: 14px 16px;
 	text-decoration: none;
 	font-size: 20px;
+	font-family: Cambria;
 }
 
 li a:hover {
@@ -39,7 +41,7 @@ li a:hover {
 }
 
 #login > input {
-	background-color: #7E9A34;
+	background-color: #4B5489;
 	color: white;
 	font-size: 20px;
 	padding: 8px;
@@ -71,11 +73,13 @@ li a:hover {
 	background-color: white;
 	margin: 0px 60px;
 	min-height: 50%;
+	font-family: Cambria;
 }
 
 p{
 	padding: 10px;
 	margin-right: 20px;
+	font-family: Cambria;
 }
 
 #logo {
@@ -104,26 +108,41 @@ input {
 .inputForms {
 	padding: 10px 0px;
 	text-align: center;
+	font-family: Cambria;
+}
+
+form {
+	font-family: Cambria;
 }
 
 h3 {
-	color: pink;
+	color: #FC8EAC;
 	text-align: center;
-	font-size: 35px;
+	font-size: 45px;
 	padding: 10px;
+	font-family: Papyrus;
 }
 
 #dashleft {
 	float: left;
-	padding-left: 20%;
+	padding-left: 10%;
 }
 
 #dashright {
 	float: right;
-	padding-right: 20%;
+	padding-right: 10%;
 }
 
 h4 {
-	color: pink;
+	color: #FC8EAC;
 	display: inline;
+	font-family: Papyrus;
+	font-size: 35px;
+}
+
+#contactInfo {
+	text-align: center;
+	font-size: 25px;
+	padding: 10px 40px;
+	margin: 0px 40px;
 }
