@@ -12,10 +12,10 @@
 
 	<div id="content" class="clearfix">
 		<div class="inputForms">
-			<form>
-				Username: <input type="text" name="username"><br>
-				Password: <input type="Password" name="fname"><br>
-				<input type="button" value="login">
+			<form action="login_handler.php" method="POST">
+				E-mail: <input type="text" name="email"><br>
+				Password: <input type="Password" name="password"><br>
+				<input type="submit" value="login">
 			</form>
 			<form action="register.php" id="register">
 				<input type="submit" value="Register" />

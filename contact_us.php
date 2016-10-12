@@ -13,7 +13,7 @@
 	<div id="content" class="clearfix">
 		<h3>Contact Us</h3>
 		<p id="contactInfo">
-			If you have any questions, comments, concerns, snarky remarks, or suggestions to improve the site you can contact the owner at this e-mail address:  maryscott@u.boisestate.edu
+			If you have any questions, comments, concerns, derogatory remarks, or suggestions to improve the site you can contact the owner at this e-mail address:  maryscott@u.boisestate.edu
 		</p>
 	</div>
 
