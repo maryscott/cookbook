@@ -3,12 +3,12 @@
 // class for saving and getting comments from MySQL
 class Dao {
 
-  private $host = "localhost";
-  private $db = "cookbook";
-  private $user = "root";
-  private $pass = "mcps0324";
-
-  public function getConnection () {
+  private $host = "us-cdbr-iron-east-04.cleardb.net";
+  private $db = "heroku_736ebfc29713504";
+  private $user = "b339a02e0f2e3d";
+  private $pass = "b9c455ce";
+  
+ public function getConnection () {
     return
       new PDO("mysql:host={$this->host};dbname={$this->db}", $this->user,
           $this->pass);
