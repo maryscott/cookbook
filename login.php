@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/page.css">
@@ -11,6 +14,14 @@
 	</div>
 
 	<div id="content" class="clearfix">
+		<?php
+			if (isset($_SESSION["message"])) {
+				unset($_SESSION["message"]);
+				echo'<div> hello </div>';
+				
+			}
+		?>
+	
 		<div class="inputForms">
 			<form action="login_handler.php" method="POST">
 				E-mail: <input type="text" name="email"><br>

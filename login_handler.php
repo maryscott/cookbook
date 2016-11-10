@@ -18,7 +18,9 @@
 		header("Location:login.php");
 		exit;
 	} 
-	if ($dao->doesUserExist($email,$password)) {
+	
+	$daoReturn = $dao->doesUserExist($email,$password);
+	if ($daoReturn['password'] == $password) {
 		$_SESSION['logged_in'] = true;
 		header("Location:dashboard.php");
 		exit;

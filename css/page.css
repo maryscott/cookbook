@@ -47,6 +47,18 @@ li a:hover {
 	padding: 8px;
 	margin: 8px;
 }
+#logout {
+	display:inline;
+	float: right;
+}
+
+#logout > input {
+	background-color: #4B5489;
+	color: white;
+	font-size: 20px;
+	padding: 8px;
+	margin: 8px;
+}
 
 #footer {
 	background-color: #4B5489;

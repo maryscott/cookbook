@@ -1,5 +1,8 @@
 <html>
 	<head>
+		<?php
+			session_start();
+		?>
 		<link rel="stylesheet" type="text/css" href="css/page.css">
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 	</head>
@@ -7,7 +10,7 @@
 	<body>
 		<div id="navbar" class="clearfix">
 			<?php
-				include 'navbar.php';
+				include "navbar.php";
 			?>
 		</div>
 

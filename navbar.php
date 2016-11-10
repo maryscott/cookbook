@@ -1,9 +1,15 @@
 <?php
-echo '<div id="title" class="clearfix">
-		<form action="login.php" id="login">
-			<input type="submit" value="Log In" />
-		</form>
-		<img src="favicon.png" alt="book" style="float:left;width:60px" id="logo">
+echo '<div id="title" class="clearfix">';
+		
+echo '<form action="login.php" id="login">
+		<input type="submit" value="Log In" />
+	</form>';		
+
+echo '<form action="logout_handler.php" id="login">
+		<input type="submit" value="Log Out">
+	</form>';
+		
+echo '<img src="favicon.png" alt="book" style="float:left;width:60px" id="logo">
 		<h1>Spindles Cookbook</h1>
 	</div>
 

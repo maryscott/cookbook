@@ -1,5 +1,11 @@
 <html>
 <head>
+	<?php
+		session_start();
+		if ($_SESSION['logged_in'] == false){
+			header("Location:login.php");
+		}
+	?>
 	<link rel="stylesheet" type="text/css" href="css/page.css">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 </head>
