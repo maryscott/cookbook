@@ -43,6 +43,24 @@ class Dao {
 	  return "finished";
   }
   
+  public function createTable ($tablename){
+	  $conn = $this->getConnection();
+	  $query = "CREATE TABLE " . $tablename . " (RecipeType int not null, RecipeName varchar(256) not null primary key, WebSite varchar(256) null,
+				PicFilePath varchar(256) null, RecipeTxtFilePath varchar(256) null, BriefDescription varchar(512) null);";
+	  $q = $conn->prepare($query);
+		$q->execute();
+		return "finished";
+  }
+  
+  public function getTableName ($email){
+	  $conn = $this->getConnection();
+	  $query = "SELECT tableName FROM users WHERE email = :email";
+	  $q = $conn->prepare($query);
+	  $q->bindParam(":email", $email);
+	  $q->execute();
+	   $result = $q->fetch(PDO::FETCH_ASSOC);
+	   return $result;
+  }
 }
   
   ?>

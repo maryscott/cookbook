@@ -22,6 +22,8 @@
 	$daoReturn = $dao->doesUserExist($email,$password);
 	if ($daoReturn['password'] == $password) {
 		$_SESSION['logged_in'] = true;
+		$table = $dao->getTableName($email);
+		$_SESSION['tableName'] = $table['tableName'];
 		header("Location:dashboard.php");
 		exit;
 	} else {

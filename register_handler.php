@@ -62,10 +62,15 @@
 	$tablename = preg_replace('/[^A-Za-z0-9\-]/', '', $email); 
 
 	//put into table
-	$result = $dao->registerUser($email, $password, $firstName, $lastName, $tablename);
-
+	if ($dao->registerUser($email, $password, $firstName, $lastName, $tablename)){
+		if ($dao->createTable($tablename)){
+			header("Location:login.php");
+		}
+	}
+	
+	echo "Something went wrong";
 	//return to login page
-	header("Location:login.php");
+	//header("Location:login.php");
 	exit;
 
 ?>
