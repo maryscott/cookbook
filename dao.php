@@ -8,6 +8,11 @@ class Dao {
   private $user = "b339a02e0f2e3d";
   private $pass = "b9c455ce";
   
+  /*private $host = "localhost";
+  private $db = "cookbook";
+  private $user = "root";
+  private $pass = "mcps0324";*/
+  
  public function getConnection () {
     return
       new PDO("mysql:host={$this->host};dbname={$this->db}", $this->user,
@@ -33,8 +38,9 @@ class Dao {
 	  $q->bindParam(":password", $password);
 	  $q->bindParam(":fname", $fname);
 	  $q->bindParam(":lname", $lname);
-	  $q->bindParam(":tableName", $tablename);
+	  $q->bindParam(":tablename", $tableName);
 	  $q->execute();
+	  return "finished";
   }
   
 }
