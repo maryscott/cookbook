@@ -8,8 +8,10 @@
 	?>
 	<link rel="stylesheet" type="text/css" href="css/page.css">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+	
 </head>
 <body>
+	
 	<div id="navbar" class="clearfix">
 		<?php
 			include "navbar.php";
@@ -18,42 +20,31 @@
 
 	<div id="content" class="clearfix">
 		<h3>Add a Recipe:</h3>
+		<form action="action_add_recipe.php" method="POST">
 		<div class="inputForms">
-			<form>
-				<input type="radio" name="recipeType" value="website" checked> Website<br>
-				<input type="radio" name="recipeType" value="image"> Image<br>
-				<input type="radio" name="recipeType" value="written"> Written In
-			</form>
+			
+			<p><input type="radio" name="recipeType" value='1' checked> Website</p>
+				<span>
+					URL: <input type="url" name="homepage"><br>
+				</span>
+			<p><input type="radio" name="recipeType" value='2'> Image</p>
+				<span>
+					Select a file: <input type="file" name="img"><br>
+				</span>
+			<p><input type="radio" name="recipeType" value='3'> Written In</p>
+				<span>
+					<textarea rows="10" cols="100" name="recipeInput">Type in your recipe here.</textarea><br>
+				</span>
+				
+			<div id="show"></div>
+			Recipe Name: <input type="text" name="recipeName"><br>
+			<textarea rows="10" cols="100" name="briefDesc">Brief Description of your recipe.</textarea><br>
+			<input type="submit" name="submit">
+			
 		</div>
 		
-		<div class="inputForms" id="add_a_website">
-			<form action="action_add_recipe.php">
-				URL: <input type="url" name="homepage">
-				<input type="submit" name="submit">
-			</form>
-		</div>
 		
-		<div class="inputForms" id="add_an_image">
-			<form action="action_add_recipe.php">
-				Select a file: <input type="file" name="img">
-				<input type="submit" name="submit">
-			</form>
-		</div>
-		
-		<div class="inputForms" id="add_a_recipe">
-			<form action="action_add_recipe.php">
-				<textarea rows="10" cols="100" name="recipeInput">Type in your recipe here.</textarea><br>
-				<input type="submit" name="submit">
-			</form>
-		</div>
-		
-		<div class="inputForms" id="description">
-			<form action="action_add_recipe.php">
-				<textarea rows="10" cols="100" name="briefDesc">Brief Description of your recipe.</textarea><br>
-				<input type="submit" name="submit">
-			</form>
-		</div>
-
+		</form>
 	</div>
 
 	<div id="footer">

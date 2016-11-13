@@ -64,13 +64,13 @@
 	//put into table
 	if ($dao->registerUser($email, $password, $firstName, $lastName, $tablename)){
 		if ($dao->createTable($tablename)){
+			mkdir($tablename);
 			header("Location:login.php");
 		}
 	}
 	
-	echo "Something went wrong";
 	//return to login page
-	//header("Location:login.php");
+	header("Location:login.php");
 	exit;
 
 ?>
