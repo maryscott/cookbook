@@ -39,8 +39,7 @@ class Dao {
 	  $q->bindParam(":fname", $fname);
 	  $q->bindParam(":lname", $lname);
 	  $q->bindParam(":tablename", $tableName);
-	  $q->execute();
-	  return "finished";
+	  return $q->execute();
   }
   
   public function createTable ($tablename){
@@ -48,8 +47,7 @@ class Dao {
 	  $query = "CREATE TABLE " . $tablename . " (RecipeType varchar(16) not null, RecipeName varchar(256) not null primary key, WebSite varchar(256) null,
 				PicFilePath varchar(256) null, RecipeTxtFilePath varchar(256) null, BriefDescription varchar(512) null);";
 	  $q = $conn->prepare($query);
-		$q->execute();
-		return "finished";
+		return $q->execute();
   }
   
   public function getTableName ($email){

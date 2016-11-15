@@ -67,7 +67,7 @@
 			mkdir($tablename);
 			header("Location:login.php");
 		} else {
-			echo 'problem creating table';
+			echo '<div>problem creating table</div>';
 			$_SESSION['presets']['email'] = $email;
 			$_SESSION['presets']['fname'] = $firstName;
 			$_SESSION['presets']['lname'] = $lastName;
