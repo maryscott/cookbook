@@ -16,15 +16,19 @@
 	<div id="content" class="clearfix">
 		<?php
 			if (isset($_SESSION['message'])) {
+				$messages = $_SESSION['message'];
+					echo "<div>";
+					foreach( $messages as $message){
+						echo $message . "<br>";
+					}
+					echo "</div>";
 				unset($_SESSION['message']);
-				echo'<div> hello </div>';
-				
 			}
 		?>
 	
 		<div class="inputForms">
 			<form action="login_handler.php" method="POST">
-				E-mail: <input type="text" name="email"><br>
+				E-mail: <input type="text" name="email" value="<?php if(isset($_SESSION['presets']['email'])){echo $_SESSION['presets']['email'];}?>"><br>
 				Password: <input type="Password" name="password"><br>
 				<input type="submit" value="login">
 			</form>

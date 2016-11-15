@@ -27,6 +27,8 @@
 		header("Location:dashboard.php");
 		exit;
 	} else {
+		$_SESSION['presets']['email'] = $email;
+		$_SESSION['message'][] = "Password Doesn't match";
 		header("Location:login.php");
 		exit;
 	}

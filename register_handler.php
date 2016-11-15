@@ -66,11 +66,16 @@
 		if ($dao->createTable($tablename)){
 			mkdir($tablename);
 			header("Location:login.php");
+		} else {
+			echo 'problem creating table';
+			$_SESSION['presets']['email'] = $email;
+			$_SESSION['presets']['fname'] = $firstName;
+			$_SESSION['presets']['lname'] = $lastName;
 		}
 	}
 	
 	//return to login page
-	header("Location:login.php");
+	header("Location:register.php");
 	exit;
 
 ?>
