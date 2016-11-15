@@ -15,8 +15,8 @@
 
 	<div id="content" class="clearfix">
 		<?php
-			if (isset($_SESSION["message"])) {
-				unset($_SESSION["message"]);
+			if (isset($_SESSION['message'])) {
+				unset($_SESSION['message']);
 				echo'<div> hello </div>';
 				
 			}
