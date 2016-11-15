@@ -27,9 +27,9 @@
 		</div>
 		<div class="inputForms">
 			<form action="register_handler.php" method="POST">
-				First Name: <input type="text" name="fname"><br>
-				Last Name: <input type="text" name="lname"><br>
-				E-mail: <input type="text" name="email"><br>
+				First Name: <input type="text" name="fname" value="<?php if(isset($_SESSION['presets']['fname'])){echo $_SESSION['presets']['fname'];}?>"><br>
+				Last Name: <input type="text" name="lname" value="<?php if(isset($_SESSION['presets']['lname'])){echo $_SESSION['presets']['lname'];}?>"><br>
+				E-mail: <input type="text" name="email" value="<?php if(isset($_SESSION['presets']['email'])){echo $_SESSION['presets']['email'];}?>"><br>
 				Password: <input type="Password" name="password"><br>
 				Confirm Password: <input type="Password" name="passwordCheck"><br>
 				<input type="submit" value="Register">
