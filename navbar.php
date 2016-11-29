@@ -12,7 +12,7 @@ echo '<div id="title" class="clearfix">';
 			</form>';
 	}	
 		
-echo '<img src="favicon.png" alt="book" style="float:left;width:60px" id="logo">
+echo '<img src="favicon2.png" alt="book" style="float:left;width:60px" id="logo">
 		<h1>Spindles Cookbook</h1>
 	</div>
 
