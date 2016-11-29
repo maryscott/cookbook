@@ -44,7 +44,7 @@ class Dao {
   
   public function createTable ($tablename){
 	  $conn = $this->getConnection();
-	  $query = "CREATE TABLE " . $tablename . " (RecipeType varchar(16) not null, RecipeName varchar(256) not null primary key, WebSite varchar(256) null,
+	  $query = "CREATE TABLE '$tablename' (RecipeType varchar(16) not null, RecipeName varchar(256) not null primary key, WebSite varchar(256) null,
 				PicFilePath varchar(256) null, RecipeTxtFilePath varchar(256) null, BriefDescription varchar(512) null);";
 	  $q = $conn->prepare($query);
 		return $q->execute();
