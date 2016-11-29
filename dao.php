@@ -60,10 +60,11 @@ class Dao {
 	   return $result;
   }
   
-  	public function insertRecipe ($tableName, $recipeName, $website, $img, $recipe, $description, $recipeType){
+  	public function insertRecipe ($email, $recipeName, $website, $img, $recipe, $description, $recipeType){
 	  $conn = $this->getConnection();
-	  $query = "Insert into " . $tableName . "(RecipeType, RecipeName, WebSite, PicFilePath, RecipeTxtFilePath, BriefDescription) VALUES (:recipeType, :recipeName, :website, :img, :recipe, :description)";
+	  $query = "Insert into recipes (email, recipeType, recipeName, briefDescription, url, photoPath, filePath) VALUES (:email, :recipeType, :recipeName, :description, :website, :img, :recipe)";
 	  $q = $conn->prepare($query);
+	  $q->bindParam(":email", $email);
 	  $q->bindParam(":recipeName", $recipeName);
 	  $q->bindParam(":website", $website);
 	  $q->bindParam(":img", $img);
@@ -73,14 +74,24 @@ class Dao {
 	  $q->execute();
 	}
 	
-	public function getRecipeName ($recipeName, $tableName) {
+	public function getRecipeName ($recipeName) {
 		$conn = $this->getConnection();
-	  $query = "SELECT RecipeName FROM " . $tableName . "WHERE RecipeName = :recipeName";
+	  $query = "SELECT recipeName FROM recipes WHERE RecipeName = :recipeName";
 	  $q = $conn->prepare($query);
 	  $q->bindParam(":recipeName", $recipeName);
 	  $q->execute();
 	  $result = $q->fetch(PDO::FETCH_ASSOC);
 	   return $result;
+	}
+	
+	public function browseRecipes ($email) {
+		$conn = $this->getConnection();
+		$query = "SELECT * FROM recipes WHERE email = :email";
+		$q = $conn->prepare($query);
+		$q->bindParam(":email", $email);
+		$q->execute();
+		$result = $q->fetch(PDO::FETCH_ASSOC);
+		return $result;
 	}
 }
   

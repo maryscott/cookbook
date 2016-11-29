@@ -5,8 +5,12 @@
 	?>
 	<link rel="stylesheet" type="text/css" href="css/page.css">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
 </head>
 <body>
+	<script src="https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+	<script src="js/registration-form-validation.js"></script>
 	<div id="navbar" class="clearfix">
 		<?php
 			include "navbar.php";
@@ -26,11 +30,11 @@
 			?>
 		</div>
 		<div class="inputForms">
-			<form action="register_handler.php" method="POST">
+			<form action="register_handler.php" method="POST" name="registration">
 				First Name: <input type="text" name="fname"><br>
 				Last Name: <input type="text" name="lname"><br>
 				E-mail: <input type="text" name="email"><br>
-				Password: <input type="Password" name="password"><br>
+				Password: <input type="Password" name="password" id="password1"><br>
 				Confirm Password: <input type="Password" name="passwordCheck"><br>
 				<input type="submit" value="Register">
 			</form>

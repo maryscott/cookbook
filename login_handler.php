@@ -23,7 +23,7 @@
 	if ($daoReturn['password'] == $password) {
 		$_SESSION['logged_in'] = true;
 		$table = $dao->getTableName($email);
-		$_SESSION['tableName'] = $table['tableName'];
+		$_SESSION['email'] = $email;
 		header("Location:dashboard.php");
 		exit;
 	} else {

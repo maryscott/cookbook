@@ -8,6 +8,7 @@
 	?>
 	<link rel="stylesheet" type="text/css" href="css/page.css">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
 </head>
 <body>
 	<div id="navbar" class="clearfix">

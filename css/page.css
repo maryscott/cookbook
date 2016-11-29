@@ -2,12 +2,12 @@ html {
 	background-color: #FFFDD0; 
 }
 
-#title {
+h1 {
 	text-align: center;
 	color: #E75480;
 	background-color: #FFFDD0;
 	font-size: 40px;
-	font-family: Papyrus;
+	font-family: 'Gloria Hallelujah', cursive;
 }
 
 ul {

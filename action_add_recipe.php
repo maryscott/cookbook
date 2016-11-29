@@ -10,7 +10,7 @@
 	$recipeType = $_POST['recipeType'];
 	$recipeName = $_POST['recipeName'];
 	
-	$tableName = $_SESSION['tableName'];
+	$email = $_SESSION['email'];
 		
 	$nameCheck = $dao->getRecipeName($recipeName, $tableName);
 	
@@ -30,7 +30,7 @@
 		exit;
 	} 
 	
-	$dao->insertRecipe ($tableName, $recipeName, $website, $img, $recipe, $description, $recipeType);
+	$dao->insertRecipe ($email, $recipeName, $website, $img, $recipe, $description, $recipeType);
 	
-	//header("Location:add_a_recipe.php");
+	header("Location:add_a_recipe.php");
 ?>
