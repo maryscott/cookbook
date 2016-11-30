@@ -61,8 +61,11 @@
 	//build tablename - I would like to remove all special characters from an email address and turn it into the tablename
 	$tablename = preg_replace('/[^A-Za-z0-9\-]/', '', $email); 
 
+	//hash password before putting it in database
+	$passHash = password_hash($password, PASSWORD_BCRYPT);
+	
 	//put into table
-	if ($dao->registerUser($email, $password, $firstName, $lastName, $tablename)){
+	if ($dao->registerUser($email, $passHash, $firstName, $lastName, $tablename)){
 		mkdir('./' . $tablename);
 	}
 

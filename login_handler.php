@@ -20,7 +20,8 @@
 	} 
 	
 	$daoReturn = $dao->doesUserExist($email,$password);
-	if ($daoReturn['password'] == $password) {
+	
+	if (password_verify($password, $daoReturn->password)) {
 		$_SESSION['logged_in'] = true;
 		$table = $dao->getTableName($email);
 		$_SESSION['folder'] = $table->tableName;
@@ -29,7 +30,7 @@
 		exit;
 	} else {
 		$_SESSION['presets']['email'] = $email;
-		$_SESSION['message'][] = "Password Doesn't match";
+		$_SESSION['message'][] = "Invalid password";
 		header("Location:login.php");
 		exit;
 	}

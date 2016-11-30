@@ -15,18 +15,22 @@
 	$nameCheck = $dao->getRecipeName($recipeName);
 	
 	if ($recipeName == $nameCheck){
-		$_SESSION['messages'][] = "Recipe Name has already been used";
+		$_SESSION['message'][] = "Recipe Name has already been used";
 	}
 	
 	$folder = $_SESSION['folder'];
-	$uploaddir = '/' . $folder . '/';
+	$uploaddir = $folder . '/';
+	$fileName = basename($_FILES['img']['name']);
+	$fileName = str_replace('_', ' ', $fileName);
 	
-	$uploadfile = $uploaddir . basename($_FILES['img']['name']);
+	$uploadfile = $uploaddir . $fileName;
 	
-	if (move_uploaded_file($_FILES['img']['name'], $uploadfile)){
-		$_SESSION['messages'][] = "file is valid, and was successfully uploaded.";
+	if(move_uploaded_file($_FILES['img']['name'], $uploadfile)){
+		$_SESSION['message'][] = "file is valid, and was successfully uploaded.";
 	} else {
-		$_SESSION['messages'][] = "upload failed";
+		$_SESSION['message'][] = "upload failed";
+		$_SESSION['message'][] = $folder;
+		$_SESSION['message'][] = $uploadfile;
 	}
 	
 	if (isset($_SESSION['message'])){

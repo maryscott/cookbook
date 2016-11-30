@@ -21,12 +21,11 @@ class Dao {
   
   public function doesUserExist($email, $password) {
 	  $conn = $this->getConnection();
-	  $query = "SELECT password FROM users WHERE email = :email and password = :password";
+	  $query = "SELECT password FROM users WHERE email = :email";
 	  $q = $conn->prepare($query);
 	  $q->bindParam(":email", $email);
-	  $q->bindParam(":password", $password);
 	  $q->execute();
-	  $result = $q->fetch(PDO::FETCH_ASSOC);
+	  $result = $q->fetch(PDO::FETCH_OBJ);
 	  return $result;
   }
   
