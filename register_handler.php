@@ -66,7 +66,7 @@
 	
 	//put into table
 	if ($dao->registerUser($email, $passHash, $firstName, $lastName, $tablename)){
-		mkdir('./' . $tablename);
+		mkdir('./' . $tablename, 0755);
 	}
 
 	header("Location:login.php");
