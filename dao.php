@@ -56,7 +56,7 @@ class Dao {
 	  $q = $conn->prepare($query);
 	  $q->bindParam(":email", $email);
 	  $q->execute();
-	   $result = $q->fetch(PDO::FETCH_ASSOC);
+	   $result = $q->fetch(PDO::FETCH_OBJ);
 	   return $result;
   }
   
@@ -86,13 +86,34 @@ class Dao {
 	
 	public function browseRecipes ($email) {
 		$conn = $this->getConnection();
-		$query = "SELECT * FROM recipes WHERE email = :email";
+		$query = "SELECT recipeName, briefDescription FROM recipes WHERE email = :email";
 		$q = $conn->prepare($query);
 		$q->bindParam(":email", $email);
 		$q->execute();
-		$result = $q->fetch(PDO::FETCH_ASSOC);
+		$result = $q->fetchAll(PDO::FETCH_OBJ);
 		return $result;
 	}
+	
+	public function updateViewDate ($email, $recipeName){
+		$conn = $this->getConnection();
+		$query = "UPDATE recipes SET dateViewed = curdate() WHERE email = :email and recipeName = :recipeName";
+		$q = $conn->prepare($query);
+		$q->bindParam(":email", $email);
+		$q->bindParam(":recipeName", $recipeName);
+		$q->execute();
+	}
+	
+	public function getRecipe ($email, $recipeName) {
+		$conn = $this->getConnection();
+		$query = "SELECT * FROM recipes WHERE email = :email and recipeName = :recipeName";
+		$q = $conn->prepare($query);
+		$q->bindParam(":email", $email);
+		$q->bindParam(":recipeName", $recipeName);
+		$q->execute();
+		$result = $q->fetchAll(PDO::FETCH_OBJ);
+		return $result;
+	}
+	
 }
   
   ?>

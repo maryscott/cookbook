@@ -18,21 +18,32 @@
 			include "navbar.php";
 		?>
 	</div>
-
+	
 	<div id="content" class="clearfix">
 		<?php
 			$email = $_SESSION['email'];
-			$recipes = $dao->browseRecipes($email);
-			foreach ($recipes as $recipe){
-				$name = $recipe->recipeName;
-				echo "<table id=\"browse\"><tr>";
-				echo "<td><a href=\"viewRecipe.php?rN=" . str_replace(' ', '_', $name) . "\">" . $name . "</a></td>";
-				echo "<td>" . $recipe->briefDescription . "</td>";
-				echo "</tr></table>";
-				
+			$recipeName = $_GET['rN'];
+			$recipeName = str_replace('_', ' ', $recipeName);
+			$recipe = $dao->getRecipe($email, $recipeName);
+			foreach ($recipe as $rec){
+				echo "<h3>" . $recipeName . "</h3>";
+				echo "<div id=\"viewRecipe\">";
+				if($rec->recipeType == 1){
+					$url = $rec->url;
+					echo "<a href=\"" . $url . "\">" . $url . "</a>";
+				}
+				if($rec->recipeType == 2){
+					echo "Its a photo";
+					$photoPath = $rec->photoPath;
+				}
+				if($rec->recipeType == 3){
+					echo "Its a text file";
+					$textPath = $rec->filePath;
+				}
+				echo "</div>";
 			}
+			$dao->updateViewDate ($email, $recipeName);
 		?>
-	
 	</div>
 
 	<div id="footer">

@@ -12,10 +12,21 @@
 	
 	$email = $_SESSION['email'];
 		
-	$nameCheck = $dao->getRecipeName($recipeName, $tableName);
+	$nameCheck = $dao->getRecipeName($recipeName);
 	
 	if ($recipeName == $nameCheck){
 		$_SESSION['messages'][] = "Recipe Name has already been used";
+	}
+	
+	$folder = $_SESSION['folder'];
+	$uploaddir = '/' . $folder . '/';
+	
+	$uploadfile = $uploaddir . basename($_FILES['img']['name']);
+	
+	if (move_uploaded_file($_FILES['img']['name'], $uploadfile)){
+		$_SESSION['messages'][] = "file is valid, and was successfully uploaded.";
+	} else {
+		$_SESSION['messages'][] = "upload failed";
 	}
 	
 	if (isset($_SESSION['message'])){
@@ -30,7 +41,7 @@
 		exit;
 	} 
 	
-	$dao->insertRecipe ($email, $recipeName, $website, $img, $recipe, $description, $recipeType);
+	$dao->insertRecipe ($email, $recipeName, $website, $uploadfile, $recipe, $description, $recipeType);
 	
 	header("Location:add_a_recipe.php");
 ?>

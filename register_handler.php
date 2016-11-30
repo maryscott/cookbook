@@ -63,18 +63,10 @@
 
 	//put into table
 	if ($dao->registerUser($email, $password, $firstName, $lastName, $tablename)){
-		if ($dao->createTable($tablename)){
-			mkdir('./' . $tablename);
-			header("Location:login.php");
-		} else {
-			$_SESSION['message'][] = "problem creating table";
-			$_SESSION['presets']['email'] = $email;
-			$_SESSION['presets']['fname'] = $firstName;
-			$_SESSION['presets']['lname'] = $lastName;
-			header("Location:register.php");
-		}
+		mkdir('./' . $tablename);
 	}
 
+	header("Location:login.php");
 	exit;
 
 ?>

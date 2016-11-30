@@ -14,6 +14,7 @@
 	<script src="https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
 	<script src="js/form-validation.js"></script>
+	<script src="js/radiobutton.js"></script>
 	<div id="navbar" class="clearfix">
 		<?php
 			include "navbar.php";
@@ -33,19 +34,19 @@
 				unset($_SESSION['message']);
 			}
 		?>
-		<form action="action_add_recipe.php" method="POST" name="addRecipe">
+		<form action="action_add_recipe.php" method="POST" name="addRecipe" enctype="multipart/form-data">
 		<div class="inputForms">
 			
-			<p><input type="radio" name="recipeType" value='1' checked> Website</p>
-				<span>
+			<p><input type="radio" name="recipeType" value='1'> Website</p>
+				<span id="recipeType1" class="desc" style="display: none;">
 					URL: <input type="url" name="homepage" value="<?php if(isset($_SESSION['presets']['homepage'])){echo $_SESSION['presets']['homepage'];}?>"><br>
 				</span>
 			<p><input type="radio" name="recipeType" value='2'> Image</p>
-				<span>
-					Select a file: <input type="file" name="img" value="<?php if(isset($_SESSION['presets']['img'])){echo $_SESSION['presets']['img'];}?>"><br>
+				<span id="recipeType2" class="desc" style="display: none;">
+					<label for="file">Select a file: </label><input type="file" name="img" value="<?php if(isset($_SESSION['presets']['img'])){echo $_SESSION['presets']['img'];}?>"><br>
 				</span>
 			<p><input type="radio" name="recipeType" value='3'> Written In</p>
-				<span>
+				<span id="recipeType3" class="desc" style="display: none;">
 					<textarea rows="10" cols="100" name="recipeInput" value="<?php if(isset($_SESSION['presets']['recipeInput'])){echo $_SESSION['presets']['recipeInput'];}?>">Type in your recipe here.</textarea><br>
 				</span>
 				
