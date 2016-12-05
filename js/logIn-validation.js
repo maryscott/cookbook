@@ -27,5 +27,7 @@ $(function() {
       form.submit();
     }
   });
+  
+  $("#logInErrors").fadeOut(slow);
 });
 Conclusion
