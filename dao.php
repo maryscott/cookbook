@@ -93,6 +93,26 @@ class Dao {
 		return $result;
 	}
 	
+	public function recentlyViewed ($email) {
+		$conn = $this->getConnection();
+		$query = "SELECT recipeName, briefDescription FROM recipes WHERE email = :email ORDER BY dateViewed DESC LIMIT 5";
+		$q = $conn->prepare($query);
+		$q->bindParam(":email", $email);
+		$q->execute();
+		$result = $q->fetchAll(PDO::FETCH_OBJ);
+		return $result;
+	}
+	
+	public function notRecentlyViewed ($email) {
+		$conn = $this->getConnection();
+		$query = "SELECT recipeName, briefDescription FROM recipes WHERE email = :email ORDER BY dateViewed ASC LIMIT 5";
+		$q = $conn->prepare($query);
+		$q->bindParam(":email", $email);
+		$q->execute();
+		$result = $q->fetchAll(PDO::FETCH_OBJ);
+		return $result;
+	}
+	
 	public function updateViewDate ($email, $recipeName){
 		$conn = $this->getConnection();
 		$query = "UPDATE recipes SET dateViewed = curdate() WHERE email = :email and recipeName = :recipeName";
