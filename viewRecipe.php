@@ -33,12 +33,13 @@
 					echo "<a href=\"" . $url . "\">" . $url . "</a>";
 				}
 				if($rec->recipeType == 2){
-					echo "Its a photo";
 					$photoPath = $rec->photoPath;
+					echo "<img src=\"" . $photoPath . "\" id=\"viewRecipePicture\"";
 				}
 				if($rec->recipeType == 3){
 					echo "Its a text file";
 					$textPath = $rec->filePath;
+					
 				}
 				echo "</div>";
 			}

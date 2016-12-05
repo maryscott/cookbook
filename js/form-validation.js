@@ -8,6 +8,7 @@ $(function() {
       // The key name on the left side is the name attribute
       // of an input field. Validation rules are defined
       // on the right side
+	  recipeType: "required",
       recipeName: "required",
       briefDesc: {
 		required: true,
@@ -16,7 +17,8 @@ $(function() {
     },
     // Specify validation error messages
     messages: {
-      recipeName: "Please enter a recipeName",
+	  recipeType: "Please select a recipe Type",
+      recipeName: "Please enter a Recipe Name",
       briefDesc: {
         required: "Please provide a description",
         minlength: "Your description must be at least 10 characters long"

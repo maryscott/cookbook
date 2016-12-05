@@ -1,13 +1,21 @@
 html {
-	background-color: #FFFDD0; 
+	
+}
+
+body {
+	background-image: url(http://localhost/cookbook/background.gif); 
+	
 }
 
 h1 {
 	text-align: center;
-	color: #E75480;
-	background-color: #FFFDD0;
+	color: #4B5489;
 	font-size: 90px;
-	font-family: 'Gloria Hallelujah', cursive;
+	font-family: 'Indie Flower', cursive;
+}
+
+#title {
+	background-color: rgba(255, 255, 255, 0.5);
 }
 
 ul {
@@ -27,7 +35,7 @@ li a {
 	color: white;
 	padding: 14px 16px;
 	text-decoration: none;
-	font-size: 20px;
+	font-size: 25px;
 	font-family: Cambria;
 }
 
@@ -81,11 +89,11 @@ li a:hover {
 
 #content {
 	padding: 20x 20px;
-	border: solid 1px black;
-	background-color: white;
+	background-color: rgba(255, 255, 255, 0.7);
 	margin: 0px 60px;
 	min-height: 50%;
 	font-family: Cambria;
+	font-size: 20px;
 }
 
 p{
@@ -128,7 +136,7 @@ form {
 }
 
 h3 {
-	color: #FC8EAC;
+	color: #4B5489;
 	text-align: center;
 	font-size: 45px;
 	padding: 10px;
@@ -146,7 +154,7 @@ h3 {
 }
 
 h4 {
-	color: #FC8EAC;
+	color: #4B5489;
 	display: inline;
 	font-family: Papyrus;
 	font-size: 35px;
@@ -172,4 +180,19 @@ td {
 #viewRecipe {
 	text-align: center;
 	padding: 10px 30 px;
+}
+
+.error {
+	color: red;
+}
+
+#logInErrors {
+	text-align: center;
+	color: red;
+}
+
+#viewRecipePicture{
+	margin: 20px;
+	padding-right: 10px;
+	width: 50%;
 }

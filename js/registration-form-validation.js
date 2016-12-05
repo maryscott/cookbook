@@ -21,6 +21,8 @@ $(function() {
         minlength: 5
       },
 	  passwordCheck: {
+		required: true,
+		minlength: 5,
 		equalto: "#password1"
 	  }
 	

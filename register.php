@@ -20,13 +20,15 @@
 	<div id="content" class="clearfix">
 		<div id="reg_errors">
 			<?php
-				if (isset($_SESSION['message'])){
-					$messages = $_SESSION['message'];
+				if (isset($_SESSION['message'])) {
+				$messages = $_SESSION['message'];
+					echo "<div id=\"logInErrors\">";
 					foreach( $messages as $message){
-						echo $message . "\n";
+						echo $message . "<br>";
 					}
-				}
+					echo "</div>";
 				unset($_SESSION['message']);
+			}
 			?>
 		</div>
 		<div class="inputForms">
