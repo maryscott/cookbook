@@ -5,7 +5,7 @@
 	?>
 	<link rel="stylesheet" type="text/css" href="css/page.css">
 	<link rel="shortcut icon" href="favicon2.ico" type="image/x-icon"/>
-	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
 </head>
 <body>
 	<script src="https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js"></script>
